@@ -1,0 +1,98 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  @extend %link;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: $accent-blue-color;
+
+  &--black {
+    color: $accent-black-color;
+  }
+
+  &--white {
+    color: $main-white-color;
+  }
+}
+
+.header-navigation {
+  margin-left: 90px;
+}
+
+.navigation-list {
+  @extend %list;
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    @extend %link;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__thumb {
+    position: relative;
+  }
+
+  &__thumb.current::after {
+    opacity: 1;
+  }
+
+  &__thumb::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+    border-radius: 2px;
+
+    height: 4px;
+    width: 100%;
+
+    background-color: $accent-blue-color;
+    opacity: 0;
+  }
+}
+
+.header-contacts {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: auto;
+  color: $main-grey-color;
+
+  &__ref {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    fill: $main-grey-color;
+    transition: fill 250ms $main-time-func, color 250ms $main-time-func;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}

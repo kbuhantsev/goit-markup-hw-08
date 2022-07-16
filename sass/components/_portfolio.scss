@@ -1,0 +1,116 @@
+.list-filter {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+
+  &__btn {
+    @extend %button;
+
+    width: auto;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    font-weight: 500;
+    line-height: 1.62;
+    color: inherit;
+    background-color: $btn-filter-bg-color;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: $main-time-func;
+
+    &--current {
+      background-color: $accent-blue-color;
+      color: $main-white-color;
+    }
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: $accent-blue-color;
+    color: $main-white-color;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08),
+      0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.portfolio-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $card-set-gap;
+
+  &__link {
+    @extend %link;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+
+  &__item {
+    flex-basis: calc((100% - $card-set-gap * 2) / 3);
+    transition: box-shadow 250ms $main-time-func;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  &__category {
+    font-size: 16px;
+    line-height: 1.88;
+    color: $main-grey-color;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms $main-time-func;
+  }
+
+  &__item:hover .portfolio-list__overlay {
+    transform: translateX(0);
+  }
+
+  &__text {
+    padding: 60px 24px;
+    padding-bottom: 0;
+
+    font-size: 18px;
+    line-height: 1.8;
+    color: $main-white-color;
+  }
+
+  &__footer {
+    border-top: 0;
+    border-left: 1px solid $potrfolio-cart-border-color;
+    border-bottom: 1px solid $potrfolio-cart-border-color;
+    border-right: 1px solid $potrfolio-cart-border-color;
+    padding: 20px 25px;
+  }
+}

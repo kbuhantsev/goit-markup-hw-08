@@ -1,0 +1,37 @@
+.goals-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $card-set-gap;
+
+  &__item {
+    flex-basis: calc((100% - $card-set-gap * 3) / 4);
+  }
+
+  &__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: $btn-filter-bg-color;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $main-dark-color;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    line-height: 1.7;
+    color: $main-grey-color;
+  }
+}

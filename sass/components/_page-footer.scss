@@ -1,0 +1,95 @@
+.section-footer {
+  background-color: $footer-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .site-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-list {
+  @extend %list;
+  display: flex;
+}
+
+.footer-item-adress {
+  margin-right: 70px;
+}
+
+.footer-item-links {
+  margin-right: 95px;
+}
+
+.footer-slogan {
+  padding-top: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $main-white-color;
+}
+
+.adress-list {
+  @extend %list;
+
+  &__link {
+    @extend %link;
+    font-style: normal;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+
+    &--white {
+      color: $main-white-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-blue-color;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.form-subscribe {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  margin-right: 10px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $main-white-color;
+
+  &__input {
+    width: 360px;
+    height: 50px;
+    padding-left: 16px;
+    margin-top: 20px;
+
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: inherit;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  }
+}
+
+.button-subscribe {
+  @extend %button;
+
+  &__icon {
+    margin-left: 15px;
+  }
+}

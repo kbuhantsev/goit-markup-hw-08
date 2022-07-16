@@ -1,0 +1,23 @@
+.customers {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+
+  &__link {
+    @extend %link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    width: 170px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    fill: $icons-fill-color;
+    transition: fill 250ms $main-time-func, border-color 250ms $main-time-func;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border-color: $accent-blue-color;
+  }
+}
