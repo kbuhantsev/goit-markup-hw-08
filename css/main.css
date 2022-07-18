@@ -92,7 +92,7 @@ img {
   color: #fff;
 }
 
-.portfolio-list, .list-filter, .adress-list, .footer-list, .customers, .social-links, .team__list, .works__list, .goals-list, .header-contacts, .navigation-list {
+.portfolio-list, .list-filter, .adress-list, .customers, .social-links, .team__list, .works__list, .goals-list, .header-contacts, .navigation-list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -438,11 +438,14 @@ img {
   display: inline-block;
   margin-bottom: 20px;
 }
-
-.footer-list {
+.section-footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .footer-item-adress {

@@ -7,11 +7,11 @@
     display: inline-block;
     margin-bottom: 20px;
   }
-}
 
-.footer-list {
-  @extend %list;
-  display: flex;
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .footer-item-adress {
