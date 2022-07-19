@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 
   font-weight: 500;
@@ -8,13 +9,15 @@
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
 }
 
 .site-logo {
   @extend %link;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   color: $accent-blue-color;
 
@@ -25,59 +28,143 @@
   &--white {
     color: $main-white-color;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 999;
+
+  .icon-close {
+    display: none;
+  }
+
+  &.is-open .icon-close {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $main-white-color;
+
+  @media screen and (max-width: calc($tablet - 1px)) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-color: teal;
+  }
 }
 
 .header-navigation {
-  margin-left: 90px;
+  margin-top: 50px;
+  font-size: 40px;
+  padding-left: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 90px;
+  }
 }
 
 .navigation-list {
   @extend %list;
   display: flex;
 
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  // mobile
+  @media screen and (max-width: calc($tablet - 1px)) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  // tablet
+  @media screen and (min-width: $tablet) {
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+    &__thumb {
+      position: relative;
+    }
+
+    &__thumb.current::after {
+      opacity: 1;
+    }
+
+    &__thumb::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      content: '';
+      border-radius: 2px;
+
+      height: 4px;
+      width: 100%;
+
+      background-color: $accent-blue-color;
+      opacity: 0;
+    }
   }
 
   &__link {
     @extend %link;
     display: block;
-    padding-top: 30px;
-    padding-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
+}
 
-  &__thumb {
-    position: relative;
-  }
-
-  &__thumb.current::after {
-    opacity: 1;
-  }
-
-  &__thumb::after {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    content: '';
-    border-radius: 2px;
-
-    height: 4px;
-    width: 100%;
-
-    background-color: $accent-blue-color;
-    opacity: 0;
-  }
+.header-contacts-thumb {
+  margin-top: auto;
+  margin-bottom: 50px;
+  padding-left: 40px;
 }
 
 .header-contacts {
   @extend %list;
+
   display: flex;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   gap: 30px;
-  margin-left: auto;
+
+  font-size: 24px;
   color: $main-grey-color;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    margin-left: auto;
+  }
 
   &__ref {
     @extend %link;
@@ -87,6 +174,10 @@
     transition: fill 250ms $main-time-func, color 250ms $main-time-func;
   }
 
+  &__ref--phone {
+    font-size: 34px;
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -94,5 +185,28 @@
 
   &__icon {
     margin-right: 10px;
+  }
+}
+
+.header-links {
+  @extend %list;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 65px;
+  font-size: 18px;
+  color: $accent-blue-color;
+
+  &__item:not(:last-child) {
+    &::after {
+      content: '';
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  &__link {
+    @extend %link;
   }
 }
