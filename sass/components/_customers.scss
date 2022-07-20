@@ -1,7 +1,20 @@
 .customers {
   @extend %list;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $card-set-gap;
+
+  &__item {
+    flex-basis: calc((100% - $card-set-gap) / 2);
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - $card-set-gap * 2) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - $card-set-gap * 5) / 6);
+    }
+  }
 
   &__link {
     @extend %link;
@@ -9,7 +22,7 @@
     justify-content: center;
     align-items: center;
     height: 92px;
-    width: 170px;
+    width: 100%;
     border: 1px solid #afb1b8;
     border-radius: 4px;
     fill: $icons-fill-color;

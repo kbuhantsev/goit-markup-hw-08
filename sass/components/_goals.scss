@@ -5,7 +5,15 @@
   gap: $card-set-gap;
 
   &__item {
-    flex-basis: calc((100% - $card-set-gap * 3) / 4);
+    flex-basis: 100%;
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - $card-set-gap) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - $card-set-gap * 3) / 4);
+    }
   }
 
   &__thumb {

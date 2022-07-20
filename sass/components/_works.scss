@@ -1,6 +1,10 @@
 .works {
   padding-top: 0;
 
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
+
   &__title {
     margin-bottom: 50px;
   }
@@ -8,7 +12,11 @@
   &__list {
     @extend %list;
     display: flex;
-    justify-content: space-between;
+    gap: $card-set-gap;
+  }
+
+  &__item {
+    flex-basis: calc((100% - $card-set-gap * 2) / 3);
   }
 
   &__thumb {
