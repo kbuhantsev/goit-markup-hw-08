@@ -11,6 +11,10 @@
   align-items: center;
   justify-content: space-between;
   min-height: 60px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: unset;
+  }
 }
 
 .site-logo {
@@ -27,6 +31,10 @@
 
   &--white {
     color: $main-white-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 90px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -64,7 +72,7 @@
   flex-direction: column;
   background-color: $main-white-color;
 
-  @media screen and (max-width: calc($tablet - 1px)) {
+  @media screen and (max-width: $tablet) {
     display: none;
     position: absolute;
     top: 0;
@@ -79,17 +87,19 @@
 
   @media screen and (min-width: $tablet) {
     flex-direction: row;
-    background-color: beige;
-
-    // margin-left: 90px;
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
 .header-navigation {
   font-size: 40px;
   padding-left: 40px;
-  @media screen and (max-width: calc($tablet - 1px)) {
-    margin-top: 50px;
+  margin-top: 50px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+    padding-left: 0;
   }
 }
 
@@ -98,7 +108,7 @@
   display: flex;
 
   // mobile
-  @media screen and (max-width: calc($tablet - 1px)) {
+  @media screen and (max-width: $tablet) {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 35px;
@@ -156,6 +166,9 @@
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -171,8 +184,14 @@
   color: $main-grey-color;
 
   @media screen and (min-width: $tablet) {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
     flex-direction: row;
-    margin-left: auto;
+    gap: 10px;
     font-size: 12px;
   }
 
@@ -198,6 +217,9 @@
 
   &__icon {
     margin-right: 10px;
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
   }
 }
 

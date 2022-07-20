@@ -122,6 +122,13 @@ img {
           justify-content: space-between;
   min-height: 60px;
 }
+@media screen and (min-width: 768px) {
+  .header-container {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+}
 
 .site-logo {
   font-family: "Raleway", sans-serif;
@@ -135,6 +142,11 @@ img {
 }
 .site-logo--white {
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .site-logo {
+    margin-right: 90px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .site-logo {
@@ -177,7 +189,7 @@ img {
           flex-direction: column;
   background-color: #fff;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-container {
     display: none;
     position: absolute;
@@ -198,17 +210,22 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    background-color: beige;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 .header-navigation {
   font-size: 40px;
   padding-left: 40px;
+  margin-top: 50px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .header-navigation {
-    margin-top: 50px;
+    margin-top: 0;
+    padding-left: 0;
   }
 }
 
@@ -217,7 +234,7 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .navigation-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -273,6 +290,16 @@ img {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -292,11 +319,21 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-contacts {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-left: auto;
+    gap: 10px;
     font-size: 12px;
   }
 }
@@ -329,6 +366,11 @@ img {
 }
 .header-contacts__icon {
   margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .header-contacts__icon {
+    display: none;
+  }
 }
 
 .header-links {
