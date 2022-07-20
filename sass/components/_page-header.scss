@@ -109,14 +109,12 @@
   @extend %list;
   display: flex;
 
-  // mobile
   @media screen and (max-width: calc($tablet - 1px)) {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 35px;
   }
 
-  // tablet
   @media screen and (min-width: $tablet) {
     &__item:not(:last-child) {
       margin-right: 50px;
