@@ -5,6 +5,19 @@
   gap: 8px;
   margin-bottom: 50px;
 
+  @media screen and (max-width: $tablet) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 15px;
+  }
+
   &__btn {
     @extend %button;
 
@@ -42,6 +55,9 @@
   flex-wrap: wrap;
   gap: $card-set-gap;
 
+  @media screen and (max-width: $tablet) {
+  }
+
   &__link {
     @extend %link;
 
@@ -54,6 +70,14 @@
   &__item {
     flex-basis: calc((100% - $card-set-gap * 2) / 3);
     transition: box-shadow 250ms $main-time-func;
+
+    @media screen and (max-width: $tablet) {
+      flex-basis: calc(100% - $card-set-gap / 2);
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      flex-basis: calc((100% - $card-set-gap) / 2);
+    }
   }
 
   &__item:hover,
@@ -65,6 +89,13 @@
   &__thumb {
     position: relative;
     overflow: hidden;
+  }
+
+  &__image {
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__title {
@@ -89,7 +120,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms $main-time-func;
   }
 
