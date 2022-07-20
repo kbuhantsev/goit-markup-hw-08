@@ -23,7 +23,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    min-width: calc(100vw - 30px);
+    width: calc(100% - 30px);
     min-height: 600px;
 
     border-radius: 4px;
@@ -31,11 +31,11 @@
     background-color: $main-white-color;
 
     @media screen and (min-width: $tablet) {
-      min-width: calc(100vw - 320px);
+      width: calc(100% - 320px);
     }
 
     @media screen and (min-width: $desktop) {
-      min-width: 530px;
+      width: 530px;
     }
   }
 }
