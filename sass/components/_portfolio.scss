@@ -1,21 +1,19 @@
 .list-filter {
   @extend %list;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
 
-  @media screen and (max-width: $tablet) {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin-top: 60px;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
   }
 
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    flex-wrap: wrap;
-    margin-top: 60px;
-    margin-bottom: 15px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
   }
 
   &__btn {
@@ -53,9 +51,10 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-  gap: $card-set-gap;
+  row-gap: $card-set-gap;
 
-  @media screen and (max-width: $tablet) {
+  @media screen and (min-width: $tablet) {
+    gap: $card-set-gap;
   }
 
   &__link {
@@ -68,15 +67,16 @@
   }
 
   &__item {
-    flex-basis: calc((100% - $card-set-gap * 2) / 3);
+    flex-basis: 100%;
+
     transition: box-shadow 250ms $main-time-func;
 
-    @media screen and (max-width: $tablet) {
-      flex-basis: calc(100% - $card-set-gap / 2);
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - $card-set-gap) / 2);
     }
 
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      flex-basis: calc((100% - $card-set-gap) / 2);
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - $card-set-gap * 2) / 3);
     }
   }
 
@@ -92,10 +92,11 @@
   }
 
   &__image {
-    @media screen and (max-width: $tablet) {
-      width: 100%;
-      object-fit: cover;
-    }
+    width: 100%;
+    object-fit: cover;
+    // @media screen and (max-width: $tablet) {
+
+    // }
   }
 
   &__title {
