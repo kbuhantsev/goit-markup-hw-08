@@ -48,7 +48,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 999;
+  z-index: 10;
+
+  &:hover,
+  &:focus {
+    fill: $accent-blue-color;
+  }
 
   .icon-close {
     display: none;
@@ -71,6 +76,7 @@
   display: flex;
   flex-direction: column;
   background-color: $main-white-color;
+  z-index: 1;
 
   @media screen and (max-width: calc($tablet - 1px)) {
     display: none;
@@ -79,7 +85,7 @@
     left: 0;
 
     width: 100vw;
-    min-height: 95vh;
+    min-height: 99vh;
 
     &.is-open {
       display: flex;
