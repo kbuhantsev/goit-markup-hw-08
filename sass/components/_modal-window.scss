@@ -31,11 +31,13 @@
     background-color: $main-white-color;
 
     @media screen and (min-width: $tablet) {
-      width: calc(100% - 320px);
+      width: 450px;
+      height: 609px;
     }
 
     @media screen and (min-width: $desktop) {
       width: 530px;
+      height: 580px;
     }
   }
 }
@@ -179,11 +181,13 @@
 .agreement {
   align-self: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   margin-bottom: 30px;
 
   font-size: 12px;
+  line-height: 1.3em;
 
   @media screen and (min-width: $desktop) {
     font-size: 14px;
@@ -196,7 +200,6 @@
     white-space: nowrap;
     color: $main-grey-color;
     @media screen and (min-width: $tablet) {
-      margin-left: 7px;
     }
   }
 
