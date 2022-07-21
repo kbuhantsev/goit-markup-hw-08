@@ -92,11 +92,7 @@
   }
 
   &__image {
-    width: 100%;
-    object-fit: cover;
-    // @media screen and (max-width: $tablet) {
-
-    // }
+    margin: 0 auto;
   }
 
   &__title {
