@@ -60,7 +60,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 1200px;
   }
 }
 
@@ -668,8 +668,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 10px;
 }
 .social-links__link {
@@ -791,7 +789,6 @@ img {
 
 .footer-item-adress {
   text-align: center;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer-item-adress {
