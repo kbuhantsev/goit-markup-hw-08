@@ -13,7 +13,7 @@
   min-height: 60px;
 
   @media screen and (min-width: $tablet) {
-    justify-content: unset;
+    justify-content: flex-start;
   }
 }
 
@@ -198,8 +198,7 @@
 
   @media screen and (min-width: $desktop) {
     flex-direction: row;
-    gap: 10px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   &__ref {
@@ -220,6 +219,10 @@
     @media screen and (min-width: $tablet) {
       font-size: 12px;
     }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 
   &__item {
@@ -229,8 +232,29 @@
 
   &__icon {
     margin-right: 10px;
-    @media screen and (max-width: $tablet) {
+
+    @media screen and (max-width: calc($tablet - 1px)) {
       display: none;
+    }
+
+    &--mail {
+      width: 14px;
+      height: 10px;
+
+      @media screen and (min-width: $desktop) {
+        width: 16px;
+        height: 12px;
+      }
+    }
+
+    &--phone {
+      width: 10px;
+      height: 14px;
+
+      @media screen and (min-width: $desktop) {
+        width: 10px;
+        height: 16px;
+      }
     }
   }
 }
