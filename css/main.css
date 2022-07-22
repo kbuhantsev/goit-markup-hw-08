@@ -1143,6 +1143,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
+  z-index: 20;
 }
 .backdrop--is-hidden {
   opacity: 0;
