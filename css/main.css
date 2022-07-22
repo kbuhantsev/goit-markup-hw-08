@@ -1030,10 +1030,6 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list-filter__btn--current {
-  background-color: #2196f3;
-  color: #fff;
-}
 .list-filter__btn:hover, .list-filter__btn:focus {
   background-color: #2196f3;
   color: #fff;

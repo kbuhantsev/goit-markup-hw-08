@@ -31,11 +31,6 @@
     transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: $main-time-func;
-
-    &--current {
-      background-color: $accent-blue-color;
-      color: $main-white-color;
-    }
   }
 
   &__btn:hover,
