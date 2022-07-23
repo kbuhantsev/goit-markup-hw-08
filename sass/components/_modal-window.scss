@@ -25,7 +25,8 @@
     transform: translate(-50%, -50%);
 
     width: calc(100% - 30px);
-    min-height: 600px;
+    max-width: 450px;
+    height: 600px;
 
     border-radius: 4px;
 
