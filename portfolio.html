@@ -153,16 +153,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="./images/portfolio/img@1x.jpg 450w, ./images/portfolio/img@2x.jpg 900w"
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-1-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-1-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-1-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-1-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-1-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-1-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-1-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -182,19 +206,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-1.jpg 450w,
-                      ./images/portfolio/img@2x-1.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-1.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-2-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-2-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-2-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-2-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-2-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-2-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-2-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -212,19 +257,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-2.jpg 450w,
-                      ./images/portfolio/img@2x-2.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-2.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-3-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-3-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-3-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-3-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-3-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-3-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-3-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -242,19 +308,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-3.jpg 450w,
-                      ./images/portfolio/img@2x-3.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-3.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-4-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-4-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-4-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-4-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-4-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-4-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-4-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -272,19 +359,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-4.jpg 450w,
-                      ./images/portfolio/img@2x-4.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-4.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-5-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-5-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-5-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-5-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-5-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-5-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-5-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -302,19 +410,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-5.jpg 450w,
-                      ./images/portfolio/img@2x-5.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-5.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-6-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-6-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-6-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-6-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-6-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-6-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-6-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -332,19 +461,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-6.jpg 450w,
-                      ./images/portfolio/img@2x-6.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-6.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-7-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-7-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-7-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-7-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-7-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-7-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-7-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -362,19 +512,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-7.jpg 450w,
-                      ./images/portfolio/img@2x-7.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-7.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-8-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-8-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-8-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-8-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-8-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-8-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-8-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -392,19 +563,40 @@
             <li class="portfolio-list__item">
               <a href="#" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    class="portfolio-list__image"
-                    srcset="
-                      ./images/portfolio/img@1x-8.jpg 450w,
-                      ./images/portfolio/img@2x-8.jpg 900w
-                    "
-                    sizes="(min-width: 1200px) 33vw,
-                           (min-width: 768px) 50vw, 
-                           (min-width: 480px) 100vw,
-                           100vw"
-                    src="./images/portfolio/img@1x-8.jpg"
-                    alt="фото из портфолио"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/img-9-370@1x.jpg 1x,
+                        ./images/portfolio/desktop/img-9-370@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/img-9-354@1x.jpg 1x,
+                        ./images/portfolio/tablet/img-9-354@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/img-9-450@1x.jpg 1x,
+                        ./images/portfolio/mobile/img-9-450@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/desktop/img-9-370@1x.jpg"
+                      alt="Фото сотрудника"
+                      width="370"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <p class="portfolio-list__text">
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и

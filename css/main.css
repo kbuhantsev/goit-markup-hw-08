@@ -82,9 +82,14 @@ img {
 
 .section-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+  }
 }
 
 .current {
@@ -639,9 +644,6 @@ img {
 .works__thumb {
   position: relative;
 }
-.works__img {
-  margin: 0 auto;
-}
 .works__description {
   position: absolute;
   bottom: 0;
@@ -705,9 +707,6 @@ img {
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
   }
-}
-.team__img {
-  margin: 0 auto;
 }
 .team__deskr {
   padding: 30px 30px;
@@ -1095,9 +1094,6 @@ img {
 .portfolio-list__thumb {
   position: relative;
   overflow: hidden;
-}
-.portfolio-list__image {
-  margin: 0 auto;
 }
 .portfolio-list__title {
   margin-bottom: 4px;

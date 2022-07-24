@@ -206,10 +206,12 @@
             <li class="works__item">
               <div class="works__thumb">
                 <img
-                  class="works__img"
-                  srcset="./images/works/img@1x-1.jpg 370w, ./images/works/img@2x-1.jpg 740w"
-                  sizes="(min-width: 1200px) 33vw, 100vw"
-                  src="./images/works/img@1x-1.jpg"
+                  srcset="
+                    ./images/works/img-1-370@1x.jpg 370w,
+                    ./images/works/img-1-370@2x.jpg 740w
+                  "
+                  sizes="(min-width: 1200px) 370px, 100vw"
+                  src="./images/works/img-1-370@1x.jpg"
                   alt="Изображение работ"
                 />
                 <p class="works__description">Десктопные приложения</p>
@@ -218,10 +220,12 @@
             <li class="works__item">
               <div class="works__thumb">
                 <img
-                  class="works__img"
-                  srcset="./images/works/img@1x-2.jpg 370w, ./images/works/img@2x-2.jpg 740w"
-                  sizes="(min-width: 1200px) 33vw, 100vw"
-                  src="./images/works/img@1x-2.jpg.jpg"
+                  srcset="
+                    ./images/works/img-2-370@1x.jpg 370w,
+                    ./images/works/img-2-370@2x.jpg 740w
+                  "
+                  sizes="(min-width: 1200px) 370px, 100vw"
+                  src="./images/works/img-2-370@1x.jpg"
                   alt="Изображение работ"
                 />
                 <p class="works__description">Мобильные приложения</p>
@@ -230,10 +234,12 @@
             <li class="works__item">
               <div class="works__thumb">
                 <img
-                  class="works__img"
-                  srcset="./images/works/img@1x-3.jpg 370w, ./images/works/img@2x-3.jpg 740w"
-                  sizes="(min-width: 1200px) 33vw, 100vw"
-                  src="./images/works/img@1x-3.jpg"
+                  srcset="
+                    ./images/works/img-3-370@1x.jpg 370w,
+                    ./images/works/img-3-370@2x.jpg 740w
+                  "
+                  sizes="(min-width: 1200px) 370px, 100vw"
+                  src="./images/works/img-3-370@1x.jpg"
                   alt="Изображение работ"
                 />
                 <p class="works__description">Дизайнерские решения</p>
@@ -248,17 +254,32 @@
           <h2 class="section-title team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team/img@1x.jpg 450w, ./images/team/img@2x.jpg 900w"
-                sizes="(min-width: 1200px) 25vw,
-                       (min-width: 768px) 50vw,
-                       (min-width: 480px) 100vw,
-                       100vw"
-                src="./images/team/img@1x.jpg"
-                alt="Фото сотрудника"
-              />
-
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-1-270@1x.jpg 1x, ./images/team/img-1-270@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-1-354@1x.jpg 1x, ./images/team/img-1-354@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-1-450@1x.jpg 1x, ./images/team/img-1-450@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/team/img-1-450@1x.jpg"
+                  alt="Фото сотрудника"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__deskr">
                 <p class="team__name">Игорь Демьяненко</p>
                 <p class="team__position" lang="en">Product Designer</p>
@@ -307,16 +328,32 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team/img@1x-1.jpg 450w, ./images/team/img@2x-1.jpg 900w"
-                sizes="(min-width: 1200px) 25vw,
-                       (min-width: 768px) 50vw,
-                       (min-width: 480px) 100vw,
-                       100vw"
-                src="./images/team/img@1x-1.jpg"
-                alt="Фото сотрудника"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-2-270@1x.jpg 1x, ./images/team/img-2-270@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-2-354@1x.jpg 1x, ./images/team/img-2-354@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-2-450@1x.jpg 1x, ./images/team/img-2-450@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/team/img-2-450@1x.jpg"
+                  alt="Фото сотрудника"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__deskr">
                 <p class="team__name">Ольга Репина</p>
                 <p class="team__position" lang="en">Frontend Developer</p>
@@ -365,16 +402,32 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team/img@1x-2.jpg 450w, ./images/team/img@2x-2.jpg 900w"
-                sizes="(min-width: 1200px) 25vw,
-                       (min-width: 768px) 50vw,
-                       (min-width: 480px) 100vw,
-                       100vw"
-                src="./images/team/img@1x-2.jpg"
-                alt="Фото сотрудника"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-3-270@1x.jpg 1x, ./images/team/img-3-270@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-3-354@1x.jpg 1x, ./images/team/img-3-354@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-3-450@1x.jpg 1x, ./images/team/img-3-450@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/team/img-3-450@1x.jpg"
+                  alt="Фото сотрудника"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__deskr">
                 <p class="team__name">Николай Тарасов</p>
                 <p class="team__position" lang="en">Marketing</p>
@@ -423,16 +476,32 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                srcset="./images/team/img@1x-3.jpg 450w, ./images/team/img@2x-3.jpg 900w"
-                sizes="(min-width: 1200px) 25vw,
-                       (min-width: 768px) 50vw,
-                       (min-width: 480px) 100vw,
-                       100vw"
-                src="./images/team/img@1x-3.jpg"
-                alt="Фото сотрудника"
-              />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-4-270@1x.jpg 1x, ./images/team/img-4-270@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-4-354@1x.jpg 1x, ./images/team/img-4-354@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-4-450@1x.jpg 1x, ./images/team/img-4-450@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/team/img-4-450@1x.jpg"
+                  alt="Фото сотрудника"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__deskr">
                 <p class="team__name">Михаил Ермаков</p>
                 <p class="team__position" lang="en">UI Designer</p>
