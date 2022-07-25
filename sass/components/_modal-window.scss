@@ -33,12 +33,11 @@
     background-color: $main-white-color;
 
     @media screen and (min-width: $tablet) {
-      width: 450px;
       height: 609px;
     }
 
     @media screen and (min-width: $desktop) {
-      width: 530px;
+      max-width: 530px;
       height: 580px;
     }
   }

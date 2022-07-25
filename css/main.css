@@ -1176,13 +1176,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .backdrop__modal {
-    width: 450px;
     height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
   .backdrop__modal {
-    width: 530px;
+    max-width: 530px;
     height: 580px;
   }
 }
