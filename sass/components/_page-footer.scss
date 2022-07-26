@@ -47,6 +47,10 @@
   text-align: center;
   margin-bottom: 60px;
 
+  @media screen and (min-width: $tablet) {
+    margin-top: 5px;
+  }
+
   @media screen and (min-width: $desktop) {
     width: 200px;
     text-align: left;

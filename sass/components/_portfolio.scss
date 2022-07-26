@@ -52,15 +52,6 @@
     gap: $card-set-gap;
   }
 
-  &__link {
-    @extend %link;
-
-    &:hover,
-    &:focus {
-      color: inherit;
-    }
-  }
-
   &__item {
     flex-basis: 100%;
 
@@ -79,6 +70,19 @@
   &__item:focus {
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06),
       0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  &__link {
+    @extend %link;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
   }
 
   &__thumb {
@@ -126,6 +130,7 @@
   }
 
   &__footer {
+    flex-grow: 1;
     border-top: 0;
     border-left: 1px solid $potrfolio-cart-border-color;
     border-bottom: 1px solid $potrfolio-cart-border-color;
