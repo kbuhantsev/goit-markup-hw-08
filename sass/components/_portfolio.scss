@@ -53,7 +53,7 @@
   }
 
   &__item {
-    flex-basis: 100%;
+    flex-basis: 450px;
 
     transition: box-shadow 250ms $main-time-func;
 
@@ -131,6 +131,7 @@
 
   &__footer {
     flex-grow: 1;
+
     border-top: 0;
     border-left: 1px solid $potrfolio-cart-border-color;
     border-bottom: 1px solid $potrfolio-cart-border-color;
