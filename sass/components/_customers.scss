@@ -5,14 +5,14 @@
   gap: $card-set-gap;
 
   &__item {
-    flex-basis: calc((100% - $card-set-gap) / 2);
+    @include flex-basis(2);
 
     @media screen and (min-width: $tablet) {
-      flex-basis: calc((100% - $card-set-gap * 2) / 3);
+      @include flex-basis(3);
     }
 
     @media screen and (min-width: $desktop) {
-      flex-basis: calc((100% - $card-set-gap * 5) / 6);
+      @include flex-basis(6);
     }
   }
 
@@ -26,7 +26,12 @@
     border: 1px solid #afb1b8;
     border-radius: 4px;
     fill: $icons-fill-color;
-    transition: fill 250ms $main-time-func, border-color 250ms $main-time-func;
+
+    transition: {
+      property: fill, border-color;
+      duration: 250ms;
+      timing-function: $main-time-func;
+    }
   }
 
   &__link:hover,

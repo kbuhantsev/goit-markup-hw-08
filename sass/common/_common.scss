@@ -15,8 +15,10 @@
 
 .container {
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: {
+    left: 15px;
+    right: 15px;
+  }
 
   @media screen and (min-width: $mobile) {
     width: 480px;
@@ -35,13 +37,17 @@
   background-color: $main-white-color;
 
   @media screen and (max-width: $desktop) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: {
+      top: 60px;
+      bottom: 60px;
+    }
   }
 
   @media screen and (min-width: $desktop) {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: {
+      top: 94px;
+      bottom: 94px;
+    }
   }
 }
 

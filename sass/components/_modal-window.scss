@@ -144,8 +144,8 @@
     position: absolute;
     top: 50%;
     left: 12px;
-    transform: translateY(-50%);
 
+    transform: translateY(-50%);
     transition: fill 250ms $main-time-func;
   }
 
@@ -216,9 +216,11 @@
     border: 2px solid #000000;
     border-radius: 2px;
 
-    transition-property: background-color, border-color;
-    transition-duration: 250ms;
-    transition-timing-function: linear;
+    transition: {
+      property: background-color, border-color;
+      duration: 250ms;
+      timing-function: linear;
+    }
 
     @media screen and (min-width: $tablet) {
       margin-right: 5px;
@@ -228,10 +230,12 @@
 
 .agreement__checkbox {
   &:checked + .agreement__checkbox-icon {
-    background-color: $accent-blue-color;
-    background-image: url('../images/svg/icon-check.svg');
-    background-size: contain;
+    background: {
+      color: $accent-blue-color;
+      image: url('../images/svg/icon-check.svg');
+      size: contain;
+      origin: border-box;
+    }
     border-color: $accent-blue-color;
-    background-origin: border-box;
   }
 }

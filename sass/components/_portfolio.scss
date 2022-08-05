@@ -20,17 +20,21 @@
     @extend %button;
 
     width: auto;
-    padding-left: 22px;
-    padding-right: 22px;
+    padding: {
+      left: 22px;
+      right: 22px;
+    }
 
     font-weight: 500;
     line-height: 1.62;
     color: inherit;
     background-color: $btn-filter-bg-color;
 
-    transition-property: background-color, color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: $main-time-func;
+    transition: {
+      property: background-color, color, box-shadow;
+      duration: 250ms;
+      timing-function: $main-time-func;
+    }
   }
 
   &__btn:hover,
@@ -59,11 +63,11 @@
     transition: box-shadow 250ms $main-time-func;
 
     @media screen and (min-width: $tablet) {
-      flex-basis: calc((100% - $card-set-gap) / 2);
+      @include flex-basis(2);
     }
 
     @media screen and (min-width: $desktop) {
-      flex-basis: calc((100% - $card-set-gap * 2) / 3);
+      @include flex-basis(3);
     }
   }
 
@@ -92,8 +96,10 @@
 
   &__title {
     margin-bottom: 4px;
-    font-weight: 700;
-    font-size: 18px;
+    font: {
+      weight: 700;
+      size: 18px;
+    }
     line-height: 2;
     letter-spacing: 0.06em;
   }
@@ -140,10 +146,13 @@
   &__footer {
     flex-grow: 1;
 
-    border-top: 0;
-    border-left: 1px solid $potrfolio-cart-border-color;
-    border-bottom: 1px solid $potrfolio-cart-border-color;
-    border-right: 1px solid $potrfolio-cart-border-color;
+    border: {
+      top: 0;
+      left: 1px solid $potrfolio-cart-border-color;
+      bottom: 1px solid $potrfolio-cart-border-color;
+      right: 1px solid $potrfolio-cart-border-color;
+    }
+
     padding: 20px 25px;
   }
 }

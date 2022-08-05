@@ -19,9 +19,13 @@
 
 .site-logo {
   @extend %link;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+
+  font: {
+    family: 'Raleway', sans-serif;
+    weight: 700;
+    size: 24px;
+  }
+
   line-height: 1.2;
   color: $accent-blue-color;
 
@@ -111,8 +115,8 @@
 
   @media screen and (min-width: $tablet) {
     margin-top: 0;
-    padding-left: 0;
     margin-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -169,9 +173,11 @@
 
 .header-contacts-thumb {
   display: block;
-  margin-top: auto;
-  margin-bottom: 50px;
-  margin-left: 40px;
+  margin: {
+    top: auto;
+    bottom: 50px;
+    left: 40px;
+  }
 
   @media screen and (min-width: $tablet) {
     margin-top: 0;
@@ -211,7 +217,11 @@
     display: flex;
     align-items: center;
     fill: $main-grey-color;
-    transition: fill 250ms $main-time-func, color 250ms $main-time-func;
+    transition: {
+      property: fill, color;
+      duration: 250ms;
+      timing-function: $main-time-func;
+    }
   }
 
   &__ref--phone {

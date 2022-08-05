@@ -15,7 +15,8 @@
     height: 44px;
 
     fill: $icons-fill-color;
-    transition: fill 250ms $main-time-func, background-color 250ms $main-time-func;
+    transition: 250ms $main-time-func;
+    transition-property: fill, background-color;
 
     &--black {
       background-color: rgba(255, 255, 255, 0.1);

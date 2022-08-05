@@ -11,13 +11,14 @@
 
     text-align: center;
 
-    background-color: $hero-background-color;
-    background-size: cover;
-
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url('../images/hero/hero-background_mobile.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+    background: {
+      color: $hero-background-color;
+      image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/hero/hero-background_mobile.jpg');
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
